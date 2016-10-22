@@ -4,5 +4,5 @@ with (import ~/nixpkgs {});
 haskell.lib.buildStackProject {
   inherit ghc;
   name = "myEnv";
-  buildInputs = [ stack glpk pcre ];
+  buildInputs = [ glpk openssl pcre postgresql.lib stack zlib ];
 }
